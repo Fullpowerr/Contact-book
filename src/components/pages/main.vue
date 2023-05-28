@@ -3,7 +3,7 @@
       <v_button
          v-if="!dialogCreateContact"
          @click="dialogCreateShow"
-         class="flex mx-auto font-mono tracking-widest active:scale-110"
+         class="flex mx-auto font-mono tracking-widest"
          >create</v_button
       >
       <v_button

@@ -50,15 +50,14 @@ export default {
       ]),
       ...mapGetters({
          searchContacts: 'searchContacts',
-         moutnBeginning: 'moutnBeginning',
       }),
    },
    mounted() {
-      this.$store.commit(
-         'loadingArrContacts',
-         JSON.parse(localStorage.getItem('all-contacts'))
-      );
+      if (this.searchQuery.length > 1)
+         this.$store.commit(
+            'loadingArrContacts',
+            JSON.parse(localStorage.getItem('all-contacts'))
+         );
    },
 };
 </script>
-<style scoped></style>
