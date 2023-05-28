@@ -4,7 +4,7 @@
          <button @click="$router.push('/')">
             <img
                class="mx-72 hover:scale-110"
-               src="src\assets\free-icon-phone-6596115.png"
+               src="../assets/free-icon-phone-6596115.png"
                width="100"
             />
          </button>
