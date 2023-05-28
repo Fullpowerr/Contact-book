@@ -81,7 +81,6 @@ export default createStore({
          state.indexContact = payload;
       },
       createContact(state) {
-         state.arrContacts = state.arrContacts;
          if ((state.name || state.surname) !== '') {
             state.arrContacts.push(
                (state.contact = {
@@ -192,7 +191,9 @@ export default createStore({
          state.dialogCreateContact = true;
       },
       loadingArrContacts(state, payload) {
-         state.arrContacts = payload;
+         if (payload !== null) {
+            state.arrContacts = payload;
+         }
       },
    },
    actions: {},

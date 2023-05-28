@@ -53,11 +53,10 @@ export default {
       }),
    },
    mounted() {
-      if (this.searchQuery.length > 1)
-         this.$store.commit(
-            'loadingArrContacts',
-            JSON.parse(localStorage.getItem('all-contacts'))
-         );
+      this.$store.commit(
+         'loadingArrContacts',
+         JSON.parse(localStorage.getItem('all-contacts'))
+      );
    },
 };
 </script>
