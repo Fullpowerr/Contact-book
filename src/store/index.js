@@ -8,7 +8,7 @@ export default createStore({
       email: '',
       surname: '',
       address: '',
-      removeItemStorage: null,
+      removeItemStorage: '',
       company: '',
       phoneNumber: null,
       isExpanded: false,
