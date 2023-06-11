@@ -8,7 +8,7 @@
             @click="dialogCreateShow"
             class="ml-10 bg-inherit border-none cursor-pointer w-14 h-14 ease-in-out hover:scale-110"
          >
-            <img src="src\assets\1495573747-jd08_84497.svg" />
+            <img src="/src/assets/plus-contact.png" />
          </div>
       </div>
       <div class="text-center">
