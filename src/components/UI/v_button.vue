@@ -1,6 +1,6 @@
 <template>
    <button
-      class="rounded-none border-dotted text-sky-700 border-4 border-sky-500 p-1"
+      class="rounded-md text-white border-4 bg-zinc-500 border-zinc-500 p-1"
    >
       <slot> </slot>
    </button>

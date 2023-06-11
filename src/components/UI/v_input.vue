@@ -1,10 +1,9 @@
 <template>
    <input
-      class="border-b-2 border-sky-400 bg-sky-100 w-96 text-center"
+      class="border rounded-md border-zinc-400 w-96 text-center"
       :value="modelValue"
       @input="updateInput"
-      type="text"
-      title="enter the text"
+      title="вводите текст"
    />
 </template>
 

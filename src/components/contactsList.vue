@@ -1,25 +1,37 @@
 <template>
-   <div class="w-2/4 h-screen mx-auto bg-sky-50 mt-4">
+   <div class="w-2/4 h-screen mx-auto mt-4">
       <div class="font-mono text-xl flex-col">
          <div
             class="mx-auto text-center pt-8"
             v-if="searchContacts.length < 1 && !searchQuery"
          >
-            <p>You don't have any saved contacts...</p>
+            <p>У Вас нет сохраненных контактов...</p>
          </div>
          <div
             class="mx-auto text-center pt-8"
             v-if="searchContacts.length == 0 && searchQuery"
          >
-            Contact "{{ searchQuery }}" not found ...
+            Контакт "{{ searchQuery }}" не найден
          </div>
-         <contact
-            v-else
-            class="m-2 mx-auto"
-            v-for="(title_contact_sheet, i) in searchContacts"
-            :title_contact_sheet="title_contact_sheet"
-            :key="i"
-         />
+         <div v-else>
+            <div
+               @click="
+                  $router.push({
+                     name: 'contact_data',
+                     params: { id: title_contact_sheet.id },
+                  })
+               "
+               class="m-2 mx-auto text-center cursor-pointer ease-in-out hover:scale-110 hover:text-sky-700"
+               v-for="(title_contact_sheet, i) in searchContacts"
+               :title_contact_sheet="title_contact_sheet"
+               :key="i"
+            >
+               <p @click="$store.commit('indexContact', i)">
+                  {{ title_contact_sheet.name }}
+                  {{ title_contact_sheet.surname }}
+               </p>
+            </div>
+         </div>
       </div>
    </div>
 </template>
@@ -31,30 +43,24 @@ import contact from './contact.vue';
 export default {
    name: 'contactsList',
    components: { v_input, create_form, contact },
+   props: {
+      i: {
+         type: Number,
+      },
+   },
    computed: {},
    methods: {
-      ...mapMutations({
-         setContactName: 'setContactName',
-         activationShow: 'activationShow',
-         deactivationShow: 'deactivationShow',
-         getObjLocalStorage: 'getObjLocalStorage',
-      }),
+      ...mapMutations({}),
    },
    computed: {
-      ...mapState([
-         'name',
-         'surname',
-         'phoneNumber',
-         'arrContacts',
-         'searchQuery',
-      ]),
+      ...mapState(['searchQuery']),
       ...mapGetters({
          searchContacts: 'searchContacts',
       }),
    },
    mounted() {
       this.$store.commit(
-         'loadingArrContacts',
+         'loadingPageContactsList',
          JSON.parse(localStorage.getItem('all-contacts'))
       );
    },

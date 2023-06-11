@@ -1,9 +1,9 @@
 <template>
-   <div class="font-mono mt-4 w-2/4 mx-auto justify-between">
+   <!-- <div class="font-mono mt-4 w-2/4 mx-auto justify-ar">
       <div class="flex relative">
          <p>{{ title_contact_sheet.name }}</p>
-         <p class="pl-4">{{ title_contact_sheet.surname }}</p>
-         <v_button
+         <p class="pl-4">{{ title_contact_sheet.surname }}</p> -->
+   <!-- <v_button
             class="ml-4 text-sm text-center absolute right-1/3 cursor-s-resize transition ease-in-out hover:-translate-x-1 hover:scale-110 hover:text-sky-600"
             v-if="!title_contact_sheet.isExpanded"
             @click="
@@ -24,10 +24,10 @@
                )
             "
             >roll up</v_button
-         >
-         <router-link :to="{ name: 'data' }">
+         > -->
+   <!-- <router-link :to="{ name: 'contact_data' }">
             <v_button
-               class="text-xl border-y-2 ml-4 border-sky-500 absolute right-0 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-sky-700"
+               class="text-xl ml-4 bg-transparent border-transparent text-sky-600 absolute right-0 hover:text-sky-700"
                @click="
                   $store.commit('setContactObj', title_contact_sheet),
                      $store.commit(
@@ -39,8 +39,8 @@
             >
          </router-link>
       </div>
-   </div>
-   <div
+   </div> -->
+   <!-- <div
       class="font-mono mt-4 w-2/4 mx-auto justify-between"
       v-if="title_contact_sheet.isExpanded"
    >
@@ -53,7 +53,7 @@
       <p class="italic text-center">{{ title_contact_sheet.email }}</p>
       <p class="italic text-center">{{ title_contact_sheet.address }}</p>
       <p class="italic text-center">{{ title_contact_sheet.company }}</p>
-   </div>
+   </div> -->
 </template>
 <script>
 import { mapState, mapMutations } from 'vuex';
