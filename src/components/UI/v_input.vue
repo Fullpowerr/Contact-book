@@ -1,6 +1,6 @@
 <template>
    <input
-      class="border rounded-md border-zinc-400 w-96 text-center"
+      class="border rounded-md border-zinc-400 w-80 text-center"
       :value="modelValue"
       @input="updateInput"
       title="вводите текст"

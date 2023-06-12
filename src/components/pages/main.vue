@@ -6,7 +6,7 @@
          <div
             v-if="!dialogCreateContact"
             @click="dialogCreateShow"
-            class="ml-10 bg-inherit border-none cursor-pointer w-14 h-14 ease-in-out hover:scale-110"
+            class="ml-10 bg-inherit border-none cursor-pointer w-14 h-14 ease-in-out hover:scale-110 duration-150"
          >
             <img src="/src/assets/plus-contact.png" />
          </div>

@@ -21,7 +21,7 @@
                      params: { id: title_contact_sheet.id },
                   })
                "
-               class="m-2 mx-auto text-center cursor-pointer ease-in-out hover:scale-110 hover:text-sky-700"
+               class="m-2 mx-auto text-center cursor-pointer ease-in-out hover:scale-110 hover:text-sky-700 duration-300"
                v-for="(title_contact_sheet, i) in searchContacts"
                :title_contact_sheet="title_contact_sheet"
                :key="i"

@@ -6,42 +6,43 @@
    >
       <div
          @click.stop
-         class="flex flex-col justify-center w-4/12 h-1/4 m-auto bg-gray-50 rounded-lg"
+         class="justify-center h-1/4 m-auto bg-gray-50 rounded-lg"
       >
-         <v_input
-            class="mb-1 mx-auto text-slate-900"
-            :model-value="name"
-            required
-            @update:model-value="setName"
-            type="text"
-            placeholder="имя"
-            maxlength="22"
-         />
-         <v_input
-            class="mb-1 mx-auto"
-            :model-value="surname"
-            @update:model-value="setSurname"
-            type="text"
-            placeholder="фамилия"
-            maxlength="22"
-         />
-         <v_input
-            class="mb-1 mx-auto"
-            :model-value="phoneNumber"
-            @update:model-value="setPhoneNumber"
-            type="phone"
-            required
-            pattern="^\+7[1-9]{10}$"
-            placeholder="номер телефона"
-            maxlength="20"
-            min="2"
-         />
-         <v_button
-            @keyup.enter
-            @click="createContact"
-            class="flex mx-auto font-mono tracking-widest mt-6"
-            >создать контакт</v_button
-         >
+         <div class="flex flex-col p-4">
+            <v_input
+               class="mb-1 mt-6"
+               :model-value="name"
+               required
+               @update:model-value="setName"
+               type="text"
+               placeholder="имя"
+               maxlength="22"
+            />
+            <v_input
+               class="mb-1"
+               :model-value="surname"
+               @update:model-value="setSurname"
+               type="text"
+               placeholder="фамилия"
+               maxlength="22"
+            />
+            <v_input
+               :model-value="phoneNumber"
+               @update:model-value="setPhoneNumber"
+               type="phone"
+               required
+               pattern="^\+7[1-9]{10}$"
+               placeholder="номер телефона"
+               maxlength="20"
+               min="2"
+            />
+            <v_button
+               @keyup.enter
+               @click="createContact"
+               class="flex mx-auto font-mono tracking-widest mt-6"
+               >создать контакт</v_button
+            >
+         </div>
       </div>
    </form>
 </template>
