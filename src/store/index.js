@@ -69,6 +69,7 @@ export default createStore({
       },
       showEditData(state) {
          state.showEdit = true;
+         state.show = false;
       },
       indexContact(state, payload) {
          state.indexContact = payload;
