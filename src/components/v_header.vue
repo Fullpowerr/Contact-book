@@ -9,7 +9,7 @@
             width="100"
          />
       </button>
-      <p class="font-mono text-3xl text-sky-600">Contact Book</p>
+      <p class="font-mono text-3xl text-sky-600 mr-2">Contact Book</p>
 
       <p
          @click="$router.push('about')"

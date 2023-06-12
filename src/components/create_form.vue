@@ -6,9 +6,9 @@
    >
       <div
          @click.stop
-         class="justify-center h-1/4 m-auto bg-gray-50 rounded-lg"
+         class="justify-center h-1/4 m-auto bg-gray-50 rounded-lg p-2"
       >
-         <div class="flex flex-col p-4">
+         <div class="flex flex-col p-4 items-center">
             <v_input
                class="mb-1 mt-6"
                :model-value="name"
@@ -39,7 +39,7 @@
             <v_button
                @keyup.enter
                @click="createContact"
-               class="flex mx-auto font-mono tracking-widest mt-6"
+               class="flex mx-auto font-mono tracking-widest mt-4"
                >создать контакт</v_button
             >
          </div>

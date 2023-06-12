@@ -37,7 +37,7 @@
          />
          <input
             v-if="showEdit"
-            class="border ml-4"
+            class="border mt-2"
             type="text"
             placeholder="фамилия"
             maxlength="22"
@@ -135,19 +135,19 @@
             <v_button
                v-else
                @click="addInfoContact"
-               class="text-xl rounded-md border bg-transparent border-zinc-500 text-zinc-500 p-1"
+               class="text-xl rounded-md border bg-transparent border-zinc-500 text-zinc-500 p-1 mb-4"
             >
                сохранить
             </v_button>
          </div>
-         <div v-else class="mt-24"></div>
+
          <div
             v-if="show"
             class="flex flex-col justify-center mx-auto text-xl w-2/3"
          >
             <input
                v-if="!contact.name"
-               class="border mt-4"
+               class="border mt-2"
                type="text"
                placeholder="имя"
                maxlength="22"
@@ -155,7 +155,7 @@
             />
             <input
                v-if="!contact.surname"
-               class="border mt-4"
+               class="border mt-2"
                type="text"
                placeholder="фамилия"
                maxlength="22"
@@ -163,7 +163,7 @@
             />
             <input
                v-if="!contact.phoneNumber"
-               class="border mt-4"
+               class="border mt-2"
                type="phone"
                maxlength="20"
                placeholder="номер телефона"
@@ -173,7 +173,7 @@
             />
             <input
                v-if="!contact.addPhoneNumber"
-               class="border mt-4"
+               class="border mt-2"
                type="phone"
                placeholder=" дополнительный номер "
                maxlength="20"
@@ -191,14 +191,14 @@
             />
             <input
                v-if="!contact.address"
-               class="border mt-4"
+               class="border mt-2"
                type="text"
                placeholder="адрес"
                @input="this.$store.commit('setAddress', $event.target.value)"
             />
             <input
                v-if="!contact.company"
-               class="border mt-4"
+               class="border mt-2"
                type="text"
                maxlength="40"
                placeholder="компания"
