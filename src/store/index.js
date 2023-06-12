@@ -64,6 +64,13 @@ export default createStore({
       activationShow(state) {
          state.show = true;
          state.showEdit = false;
+         (state.name = ''),
+            (state.surname = ''),
+            (state.phoneNumber = ''),
+            (state.addPhoneNumber = ''),
+            (state.address = ''),
+            (state.email = ''),
+            (state.company = '');
       },
       deactivationShow(state) {
          state.show = false;
