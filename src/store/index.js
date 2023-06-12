@@ -63,6 +63,7 @@ export default createStore({
       },
       activationShow(state) {
          state.show = true;
+         state.showEdit = false;
       },
       deactivationShow(state) {
          state.show = false;
@@ -108,17 +109,17 @@ export default createStore({
             state.arrContacts[state.indexContact].phoneNumber =
                state.phoneNumber;
          }
-         if (state.addPhoneNumber !== '') {
+         if (state.addPhoneNumber) {
             state.arrContacts[state.indexContact].addPhoneNumber =
                state.addPhoneNumber;
          }
-         if (state.email !== '') {
+         if (state.email) {
             state.arrContacts[state.indexContact].email = state.email;
          }
-         if (state.address !== '') {
+         if (state.address) {
             state.arrContacts[state.indexContact].address = state.address;
          }
-         if (state.company !== '') {
+         if (state.company) {
             state.arrContacts[state.indexContact].company = state.company;
          }
          localStorage.setItem(
