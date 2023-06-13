@@ -1,6 +1,6 @@
 <template>
    <div
-      class="flex flex-row border-b-4 border border-sky-600 justify-evenly items-center mb-10"
+      class="flex flex-row border-b-4 border-sky-600 justify-evenly items-center mb-10"
    >
       <button @click="$router.push('/')">
          <img
