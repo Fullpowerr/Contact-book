@@ -16,7 +16,6 @@ export default createStore({
       addPhoneNumber: null,
       contact: {},
       arrContacts: [],
-      deleteObj: null,
       indexContact: null,
    }),
    getters: {
