@@ -9,14 +9,14 @@
             width="100"
          />
       </button>
-      <p class="font-mono text-3xl text-sky-600 mr-2">Contact Book</p>
-
-      <p
-         @click="$router.push('about')"
-         class="cursor-pointer transition ease-in-out 1 hover:scale-110 hover:text-blue-600 text-2xl"
-      >
-         Contact
-      </p>
+      <p class="font-mono text-3xl text-sky-600">Contact Book</p>
+      <div class="mr-2" @click="$router.push('about')">
+         <p
+            class="cursor-pointer transition ease-in-out 1 hover:scale-110 hover:text-blue-600 text-2xl"
+         >
+            Contact
+         </p>
+      </div>
    </div>
 </template>
 <script>

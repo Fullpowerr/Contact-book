@@ -3,7 +3,7 @@
       <router-link :to="{ name: 'v_main' }">
          <v_button
             @click="closAllShowButtonBack"
-            class="text-xl rounded-md bg-transparent text-zinc-500 p-1 pr-2 hover:text-sky-600"
+            class="text-xl rounded-md bg-transparent pr-1 pb-1 pl-1 border border-zinc-500 text-zinc-500 hover:text-sky-600"
             >← назад</v_button
          >
       </router-link>
@@ -11,6 +11,7 @@
          @click="showEditData"
          v-if="!showEdit"
          src="/src/assets/pencil.png"
+         title="редактировать"
          class="w-10 h-10 cursor-pointer hover:scale-110"
          alt="редактировать"
       />
@@ -19,6 +20,7 @@
          @click="addInfoContact"
          src="/src/assets/done-complite.svg"
          alt="применить"
+         title="сохранить изменения"
          class="w-10 h-10 cursor-pointer hover:scale-125"
       />
    </div>
@@ -127,23 +129,15 @@
             <v_button
                v-if="!show"
                @click="activationShow"
-               class="rounded-md text-white border-4 bg-zinc-500 border-zinc-500 p-1"
+               class="text-xl rounded-md text-white border-4 bg-zinc-500 border-zinc-500 p-1"
             >
-               добавить данные...
-            </v_button>
-
-            <v_button
-               v-else
-               @click="addInfoContact"
-               class="text-xl rounded-md border bg-transparent border-zinc-500 text-zinc-500 p-1 mb-4"
-            >
-               сохранить
+               добавить данные
             </v_button>
          </div>
 
          <div
             v-if="show"
-            class="flex flex-col justify-center mx-auto text-xl w-2/3"
+            class="flex flex-col justify-center mx-auto text-lg w-2/3 mb-4"
          >
             <input
                v-if="!contact.name"
@@ -155,7 +149,7 @@
             />
             <input
                v-if="!contact.surname"
-               class="border mt-2"
+               class="border mt-2 text-xl"
                type="text"
                placeholder="фамилия"
                maxlength="22"
@@ -205,6 +199,13 @@
                @input="this.$store.commit('setCompany', $event.target.value)"
             />
          </div>
+         <v_button
+            v-if="show"
+            @click="addInfoContact"
+            class="text-xl rounded-md border bg-transparent cursor-pointer border-zinc-500 text-zinc-500 p-1 mb-4"
+         >
+            сохранить
+         </v_button>
          <div class="mt-10 transition ease-in-out hover:-translate-y-1">
             <router-link :to="{ name: 'v_main' }">
                <v_button

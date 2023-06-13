@@ -8,38 +8,40 @@
          @click.stop
          class="justify-center h-1/4 m-auto bg-gray-50 rounded-lg p-2"
       >
-         <div class="flex flex-col p-4 items-center">
-            <v_input
-               class="mb-1 mt-6"
-               :model-value="name"
-               required
-               @update:model-value="setName"
-               type="text"
-               placeholder="имя"
-               maxlength="22"
-            />
-            <v_input
-               class="mb-1"
-               :model-value="surname"
-               @update:model-value="setSurname"
-               type="text"
-               placeholder="фамилия"
-               maxlength="22"
-            />
-            <v_input
-               :model-value="phoneNumber"
-               @update:model-value="setPhoneNumber"
-               type="phone"
-               required
-               pattern="^\+7[1-9]{10}$"
-               placeholder="номер телефона"
-               maxlength="20"
-               min="2"
-            />
+         <div>
+            <div class="flex flex-col p-4 items-center">
+               <v_input
+                  class="mb-1 mt-6"
+                  :model-value="name"
+                  required
+                  @update:model-value="setName"
+                  type="text"
+                  placeholder="имя"
+                  maxlength="22"
+               />
+               <v_input
+                  class="mb-1"
+                  :model-value="surname"
+                  @update:model-value="setSurname"
+                  type="text"
+                  placeholder="фамилия"
+                  maxlength="22"
+               />
+               <v_input
+                  :model-value="phoneNumber"
+                  @update:model-value="setPhoneNumber"
+                  type="phone"
+                  required
+                  pattern="^\+7[1-9]{10}$"
+                  placeholder="номер телефона"
+                  maxlength="20"
+                  min="2"
+               />
+            </div>
             <v_button
                @keyup.enter
                @click="createContact"
-               class="flex mx-auto font-mono tracking-widest mt-4"
+               class="flex mx-auto font-mono tracking-widest"
                >создать контакт</v_button
             >
          </div>

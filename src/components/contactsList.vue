@@ -39,10 +39,10 @@
 import { mapMutations, mapState, mapGetters } from 'vuex';
 import v_input from './UI/v_input.vue';
 import create_form from './create_form.vue';
-import contact from './contact.vue';
+
 export default {
    name: 'contactsList',
-   components: { v_input, create_form, contact },
+   components: { v_input, create_form },
    props: {
       i: {
          type: Number,
