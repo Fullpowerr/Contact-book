@@ -9,7 +9,7 @@ const routes = [
       component: v_main,
    },
    {
-      path: '/:id',
+      path: '/contact/:id',
       name: 'contact_data',
       component: contact_data,
    },
