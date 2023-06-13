@@ -148,7 +148,7 @@ export default createStore({
          state.showEdit = false;
       },
 
-      // удалить выбранный контакт
+      // удалить выбранный контакт и удалить из Localstorage
       deleteContact(state) {
          state.removeItemStorage = JSON.parse(
             localStorage.getItem('all-contacts')
@@ -177,14 +177,14 @@ export default createStore({
          state.showEdit = false;
       },
 
-      // загрузка данных из массива, при открытии стр
+      // загрузка данных из массива, при открытии страницы
       loadingPageContactsList(state, payload) {
          if (payload !== null) {
             state.arrContacts = payload;
          }
       },
 
-      // загрузка страницы с выбранным контактом из localStorage
+      // загрузка страницы с выбранным контактом, из localStorage
       contactPageLoading(state, payload) {
          state.arr = JSON.parse(localStorage.getItem('all-contacts'));
          state.arrContacts = state.arr;
